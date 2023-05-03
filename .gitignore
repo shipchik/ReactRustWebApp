@@ -1,2 +1,2 @@
-/client/node_modules/
-/backend-server/target/
+/client/node_modules
+/backend-server/target

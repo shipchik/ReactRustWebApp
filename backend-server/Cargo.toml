@@ -10,3 +10,4 @@ diesel = "2.0.3"
 dotenv = "0.15.0"
 actix-web = "4.3.1"
 serde = {version = "1.0.160", features = ["derive"]}
+r2d2 = "0.8.10"
