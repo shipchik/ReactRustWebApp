@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    db:
+        environment:
+            POSTGRES_USER: "backend_db"
+            POSTGRES_DB: "backend_db"
+            POSTGRES_PASSWORD: "qwerty"
+        image: postgres:latest
+        ports:
+        - "5432:5432"
+
