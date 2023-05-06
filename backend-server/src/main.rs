@@ -1,7 +1,7 @@
 use actix_web::{get, web, App, HttpServer};
 
 mod app;
-
+pub mod schema;
 
 use app::services;
 
