@@ -79,7 +79,11 @@ fn main() -> std::io::Result<()> {
                             .service(
                                 web::resource("/update_password")
                                     .route(web::post().to_async(auth_handler::update_password)),
-                            ),
+                            )
+                            .service(
+                                web::resource("/me")
+                                    .route(web::get().to_async(auth_handler::me)),
+                            )
                     ),
             )
     })

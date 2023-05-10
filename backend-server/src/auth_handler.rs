@@ -1,6 +1,8 @@
 use actix_identity::Identity;
+use actix_web::Responder;
 use actix_web::{error::BlockingError, web, HttpResponse};
 use diesel::prelude::*;
+use serde_json::json;
 
 use crate::errors::ServiceError;
 use crate::models::{Pool, SlimUser, User};
@@ -54,11 +56,13 @@ pub fn login(
     id: Identity,
     pool: web::Data<Pool>,
 ) -> impl Future<Item = HttpResponse, Error = ServiceError> {
+    
     web::block(move || query(auth_data.into_inner(), pool)).then(
         move |res: Result<SlimUser, BlockingError<ServiceError>>| match res {
             Ok(user) => {
                 let user_string = serde_json::to_string(&user).unwrap();
                 id.remember(user_string);
+                
                 Ok(HttpResponse::Ok().finish())
             }
             Err(err) => match err {
@@ -68,6 +72,61 @@ pub fn login(
         },
     )
 }
+
+
+pub fn me(
+    id: Identity,
+    pool: web::Data<Pool>,
+) -> impl Future<Item = HttpResponse, Error = ServiceError> {
+    match id.identity().as_ref() {
+        Some(identity) => {
+            let user: SlimUser = serde_json::from_str(&identity).unwrap();
+            Either::A(
+                web::block(move || get_me(user, pool)).then(
+                    move |res: Result<SlimUser, BlockingError<ServiceError>>| match res {
+                        Ok(user) => {
+                            
+                            Ok(HttpResponse::Ok().json(user))
+                        }
+                        Err(err) => match err {
+                            BlockingError::Error(service_error) => Err(service_error),
+                            BlockingError::Canceled => Err(ServiceError::InternalServerError),
+                        },
+                    },
+                ),
+            )
+        }
+        _ => Either::B(err(ServiceError::Unauthorized)),
+    }
+}
+    
+//     let a = id.identity();
+//     match a {
+//         Some(data)=>{
+//             HttpResponse::Ok().body(data)
+//         },
+//         None => HttpResponse::Ok().finish(),
+//     }
+    
+    
+// }
+
+fn get_me(data:SlimUser ,pool: web::Data<Pool>)->Result<SlimUser,ServiceError>{
+    use crate::schema::users::dsl::{username, users};
+    let conn: &SqliteConnection = &pool.get().unwrap();
+    let mut items = users
+        .filter(username.eq(data.username))
+        .load::<User>(conn)?;
+    if let Some(user) = items.pop() {
+        let slim_user = SlimUser {
+            username: user.username,
+        };
+        println!("{:?}",slim_user);
+        return Ok(slim_user)
+    }
+    Err(ServiceError::Unauthorized)
+}
+
 
 /// Diesel query
 fn query(auth_data: User, pool: web::Data<Pool>) -> Result<SlimUser, ServiceError> {
