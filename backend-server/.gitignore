@@ -1,2 +1,7 @@
-.user.db 
-target/
+/target
+**/*.rs.bk
+Cargo.lock
+.idea
+*.iml
+.env
+rust.db
