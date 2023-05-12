@@ -1,14 +1,33 @@
+:root {
+    --AlarmText: #688EFF;
+}
+
+html {
+    background-color: #222;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+
     /* FONT */
     font-family: 'Monda', sans-serif;
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+}
 
+.content_box {
+    margin: 0 auto;
+    width: 90vw;
+    background: none;
+    min-height: 100vh;
 
+    display: flex;
+    align-items: center;
+}

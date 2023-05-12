@@ -1,11 +1,11 @@
-import style from './App.css';
-import About from './Components/About/About';
-import NavBar from './Components/NavBar/NavBar';
+import './App.css';
+import Team from './Components/OurTeam/OurTeam';
+
 
 function App() {
   return (
-    <div className='container'>
-      <NavBar/>
+    <div>
+      <Team/>
     </div>
   );
 }
