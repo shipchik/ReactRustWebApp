@@ -4,7 +4,7 @@
 .AboutHeader{
     width: 100%;
 
-    height: 100vh;
+    height: auto;
     text-align: center;
 
 }
@@ -24,6 +24,12 @@
 
 /*********************************************************************/
 /* MAIN */
+
+.AboutMain{
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+}
 
 
 

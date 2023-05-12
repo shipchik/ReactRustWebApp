@@ -1,5 +1,6 @@
 import style from './AboutUs.modules.css';
-import AboutHeaderBacground from './AboutHeaderBacground.png';
+import AboutHeaderBacground from '../../img/AboutHeaderBacground.png';
+import AboutMainBacground from '../../img/AboutMainBacground.png';
 
 function About() {
     return (
@@ -14,7 +15,13 @@ function About() {
                     <h1>We are your <p>motivation</p></h1>
                 </div>
             </header>
-            <main>
+            <main className={style.AboutMain} style={{
+                backgroundImage: `url(${AboutMainBacground})`,
+                backgroundRepeat: `no-repeat`,
+                backgroundPosition: `right top`
+
+
+            }}>
                 <div className='ContentBox'></div>
             </main>
             <footer></footer>
