@@ -4,4 +4,4 @@ Cargo.lock
 .idea
 *.iml
 .env
-rust.db
+user.db
