@@ -22,12 +22,15 @@ a {
     text-decoration: none;
 }
 
-.content_box {
+.ContentBox {
     margin: 0 auto;
+    
     width: 90vw;
-    background: none;
     min-height: 100vh;
+    max-height:auto ;
 
     display: flex;
     align-items: center;
+    
+    background: none;
 }
