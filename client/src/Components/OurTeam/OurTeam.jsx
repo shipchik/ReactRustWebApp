@@ -5,7 +5,7 @@ function Team() {
         <div className='TeamPage'>
             <header>
                 <div className='ContentBox'>
-                    <h1 className='F'>We are your <p>motivation</p></h1>
+                    <h1>We are your <p>motivation</p></h1>
                 </div>
             </header>
             <main>
