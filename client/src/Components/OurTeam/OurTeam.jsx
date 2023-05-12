@@ -4,11 +4,13 @@ function Team() {
     return (
         <div className='TeamPage'>
             <header>
-                <div className='content_box'>
-                    <h1 className='F'>We are your <p>motivation</p></h1>
+                <div className='ContentBox'>
+                    <h1>We are your <p>motivation</p></h1>
                 </div>
             </header>
-            <main></main>
+            <main>
+                <div className='ContentBox'></div>
+            </main>
             <footer></footer>
         </div>
 

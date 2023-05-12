@@ -1,28 +1,34 @@
+/*********************************************************************/
+/* HEADER */
+
 header{
     width: 100%;
 
     height: 100vh;
     text-align: center;
 
-    background-image: url(../../img/AboutHeader.svg);
+    background-image: url(../../img/AboutHeaderBacground.svg);
     /* background-position: center ; */
     background-size:cover ;
     background-repeat: no-repeat;
     
 }
 
-.content_box > h1{
+.ContentBox > h1{
     margin: 0 auto;
 
     font-size: 120px;
     font-style: bold;
 }
 
-.content_box > h1 > p {
+.ContentBox > h1 > p {
     color: var(--AlarmText);
 }
 
+/*********************************************************************/
 
+/*********************************************************************/
+/* MAIN */
 
 
 
