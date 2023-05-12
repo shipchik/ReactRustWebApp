@@ -5,7 +5,7 @@ use diesel::prelude::*;
 use serde_json::json;
 
 use crate::errors::ServiceError;
-use crate::models::{Pool, SlimUser, User};
+use crate::models::{Pool, SlimUser, User,LoginUser};
 use crate::utils::{hash, verify};
 use futures::future::err;
 use futures::future::Either;
@@ -52,7 +52,7 @@ pub fn logout(id: Identity) -> HttpResponse {
 }
 
 pub fn login(
-    auth_data: web::Json<User>,
+    auth_data: web::Json<LoginUser>,
     id: Identity,
     pool: web::Data<Pool>,
 ) -> impl Future<Item = HttpResponse, Error = ServiceError> {
@@ -129,13 +129,13 @@ fn get_me(data:SlimUser ,pool: web::Data<Pool>)->Result<SlimUser,ServiceError>{
 
 
 /// Diesel query
-fn query(auth_data: User, pool: web::Data<Pool>) -> Result<SlimUser, ServiceError> {
+fn query(auth_data: LoginUser, pool: web::Data<Pool>) -> Result<SlimUser, ServiceError> {
     use crate::schema::users::dsl::{username, users};
     let conn: &SqliteConnection = &pool.get().unwrap();
     let mut items = users
         .filter(username.eq(&auth_data.username))
         .load::<User>(conn)?;
-
+    println!("jkhxcj {:?}",items);
     if let Some(user) = items.pop() {
         if let Ok(matching) = verify(&user.password, &auth_data.password) {
             if matching {

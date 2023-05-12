@@ -38,6 +38,7 @@ fn query(auth_data: User, pool: web::Data<Pool>) -> Result<SlimUser, ServiceErro
     if items.is_empty() {
         let password: String = hash(&auth_data.password)?;
         let new_user = User {
+            email: auth_data.email,
             username: auth_data.username,
             password,
         };
