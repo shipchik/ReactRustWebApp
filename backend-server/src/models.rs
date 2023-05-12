@@ -7,6 +7,7 @@ pub type Pool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 #[derive(Debug, Serialize, Deserialize, Queryable, Insertable)]
 #[table_name = "users"]
 pub struct User {
+    pub email: String,
     pub username: String,
     pub password: String,
 }
@@ -21,5 +22,17 @@ impl From<User> for SlimUser {
         SlimUser {
             username: user.username,
         }
+    }
+}
+
+#[derive(Debug,Serialize,Deserialize)]
+pub struct LoginUser {
+    pub username:String,
+    pub password:String,
+}
+
+impl From<User> for LoginUser{
+    fn from(user:User)-> Self{
+        LoginUser { username: user.username, password: user.password }
     }
 }
