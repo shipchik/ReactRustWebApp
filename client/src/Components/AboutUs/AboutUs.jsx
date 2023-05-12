@@ -1,9 +1,9 @@
-import style from './OurTeam.modules.css'
+import style from './AboutUs.modules.css'
 
-function Team() {
+function About() {
     return (
         <div className='TeamPage'>
-            <header>
+            <header className={style.AboutHeader}>
                 <div className='ContentBox'>
                     <h1>We are your <p>motivation</p></h1>
                 </div>
@@ -17,4 +17,4 @@ function Team() {
     );
 }
 
-export default Team;
+export default About;
