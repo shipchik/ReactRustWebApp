@@ -7,11 +7,6 @@
     height: 100vh;
     text-align: center;
 
-    background-image: url(../../img/AboutHeaderBacground.svg);
-    /* background-position: center ; */
-    background-size:cover ;
-    background-repeat: no-repeat;
-    
 }
 
 .ContentBox > h1{
