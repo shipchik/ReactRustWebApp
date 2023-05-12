@@ -1,5 +1,5 @@
 import './App.css';
-import Team from './Components/OurTeam/OurTeam';
+import Team from './Components/AboutUs/AboutUs';
 
 
 function App() {
