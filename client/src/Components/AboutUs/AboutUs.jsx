@@ -4,26 +4,39 @@ import AboutMainBacground from '../../img/AboutMainBacground.png';
 
 function About() {
     return (
-        <div className='TeamPage'>
-            <header className={style.AboutHeader} style={{
+        <div className={style.AboutUs}>
+            <header style={{
                 backgroundImage: `url(${AboutHeaderBacground})`,
-                backgroundSize: `cover`,
+                WebkitBackgroundSize: `cover`,
                 backgroundRepeat: `no-repeat`
             }}>
-                <div className='ContentBox'>
-                    {/* <img src={AboutHeaderBacground} alt="AboutHeaderBacground" /> */}
-                    <h1>We are your <p>motivation</p></h1>
+                <div className='container'>
+                    <div className='HeadLine'>
+                        <h1>
+                            We are your
+                            <p>motivation</p>
+                        </h1>
+                    </div>
                 </div>
             </header>
-            <main className={style.AboutMain} style={{
-                backgroundImage: `url(${AboutMainBacground})`,
+
+
+            <main style={{
+                backgroundImage: `url(${AboutMainBacground}), `,
                 backgroundRepeat: `no-repeat`,
-                backgroundPosition: `right top`
-
-
+                backgroundPosition: ` right top`
             }}>
-                <div className='ContentBox'></div>
+                <div className='container'>
+
+                    <div className={style.AboutUsMainConent}>
+                        <section className={style.StatisticSection}>
+
+                        </section>
+                    </div>
+                </div>
             </main>
+
+
             <footer></footer>
         </div>
 
@@ -31,3 +44,6 @@ function About() {
 }
 
 export default About;
+
+
+
