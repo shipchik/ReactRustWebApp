@@ -27,8 +27,10 @@ a {
     width: auto;
     max-width: 90vw;
 
-    height: auto;
-
     margin: 0 auto;
 }
 
+
+.AlarmText{
+    color: var(--AlarmText);
+}
