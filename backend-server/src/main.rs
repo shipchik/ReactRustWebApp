@@ -84,6 +84,10 @@ fn main() -> std::io::Result<()> {
                                 web::resource("/me")
                                     .route(web::get().to_async(auth_handler::me)),
                             )
+                            .service(
+                                web::resource("/profile")
+                                    .route(web::get().to_async(auth_handler::user_profile)),
+                            )
                     ),
             )
     })

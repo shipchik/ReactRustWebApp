@@ -5,5 +5,9 @@ diesel::table! {
         email -> Text,
         username -> Text,
         password -> Text,
+        telephone -> Text,
+        groups -> Text,
+        plans -> Text,
+        photo -> Text,
     }
 }

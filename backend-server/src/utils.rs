@@ -1,5 +1,6 @@
 use crate::errors::ServiceError;
 use easy_password::bcrypt::{hash_password, verify_password};
+use actix_web::{HttpResponse};
 
 lazy_static::lazy_static! {
 pub  static ref SECRET_KEY: String = std::env::var("SECRET_KEY").unwrap_or_else(|_| "0123".repeat(8));
@@ -19,3 +20,14 @@ pub fn verify(hash: &str, password: &str) -> Result<bool, ServiceError> {
         ServiceError::Unauthorized
     })
 }
+
+
+
+// pub fn get_photo(img_name:String)->HttpResponse{
+//     let file_path = std::path::PathBuf::from(env!("HOME"))
+//         .as_path()
+//         .join(BASE_DIR)
+//         .join(DATA_PATH)
+//         .join(&filename.into_inner());
+
+// }
