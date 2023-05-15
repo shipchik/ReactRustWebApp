@@ -34,3 +34,7 @@ a {
 .AlarmText{
     color: var(--AlarmText);
 }
+
+p > i {
+    font-style: normal;
+}
