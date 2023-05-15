@@ -6,6 +6,7 @@ html {
     background-color: #222222;
 }
 
+
 *,
 *::before,
 *::after {
@@ -15,22 +16,21 @@ html {
 
     /* FONT */
     font-family: 'Monda', sans-serif;
-    color: #fff;
 }
+
 
 a {
     text-decoration: none;
 }
 
-.ContentBox {
-    margin: 0 auto;
-    
-    width: 90vw;
-    min-height: 100vh;
-    max-height:auto ;
+.container {
+    width: auto;
+    max-width: 90vw;
 
-    display: flex;
-    align-items: center;
-    
-    background: none;
+    margin: 0 auto;
+}
+
+
+.AlarmText{
+    color: var(--AlarmText);
 }

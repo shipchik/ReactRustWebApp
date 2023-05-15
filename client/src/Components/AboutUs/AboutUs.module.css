@@ -1,0 +1,80 @@
+.AboutUS {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    width: auto;
+
+    background-color: #222;
+}
+
+
+
+
+/************************************************/
+/* About Us --- Header */
+.HeadLine {
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.HeadLineText{
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+/************************************************/
+/* About Us --- Main*/
+
+.AboutUsMainConent {
+    padding-top:160px ;
+
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.AboutMainSection{
+    display: flex;
+    flex-direction: column;
+    
+    color: #fff;
+    font-style: normal;
+}
+
+.AboutMainSectionNameTag{
+    font-weight: 400;
+    font-size: 96px;
+    gap: 35px;
+}
+
+.AboutMainSection > p {
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 60px;
+}
+
+.AboutMainSectionFirstParagraf{
+    max-width: 700px;
+}
+
+.AboutMainSectionThirdParagraf{
+    max-width: 1055px;
+}
+
+.AboutMainSection > p > i {
+    font-style: normal;
+}
+
