@@ -54,7 +54,7 @@
     float: right;
 }
 
-.AboutUsMainSectionContentPosBtn{
+.AboutUsMainSectionContentPosBtn {
     height: 100%;
 
     display: flex;
@@ -98,7 +98,7 @@
     background: #394159;
     border-radius: 35px;
 
-    color: var(--AlarmText) ;
+    color: var(--AlarmText);
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -109,7 +109,10 @@
 /************************************************/
 /* About Us --- Foter*/
 
-.AboutUsFooter{
+.AboutUsFooter {
+    height: 100vh;
+    max-height: auto;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -118,12 +121,95 @@
     align-items: center;
 }
 
-.LoginForm{
+/************************************************/
+/* About Us --- Login Form*/
+
+.LoginForm {
     display: flex;
     flex-direction: column;
     gap: 93px;
 
-    justify-content: center;
+    width: 585px;
+    height: 500px;
+
+    background: #FFFFFF;
+    opacity: 0.7;
+    box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+
     align-items: center;
-    vertical-align: middle;
+    justify-content: center;
+}
+
+.LoginFormInput {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.Input {
+    width: 331px;
+    height: 56px;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    border-radius: 8px;
+
+    padding-left: 22px;
+}
+
+.CastomBtn_2 {
+    width: 305px;
+    height: 56px;
+
+    background: linear-gradient(270deg, #495E9D 0%, #688EFF 100%);
+    border-radius: 49px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/************************************************/
+/* About Us --- Social midea links*/
+.OurLinks {
+    padding-left: 59px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 523px;
+    height: 314px;
+
+
+    background: #000000;
+    opacity: 0.5;
+    box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+}
+
+.OurLinks>a {
+    color: #fff;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
 }
