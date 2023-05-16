@@ -4,7 +4,12 @@ import AboutHeaderBacground from '../../img/AboutHeaderBacground.png';
 import AboutMainBacground1 from '../../img/AboutMainBacground1.png';
 import AboutMainBacground2 from '../../img/AboutMainBacground2.png';
 import AboutMainBacground3 from '../../img/AboutMainBacground3.png';
-import AboutFooterBacground from '../../img/AboutFooterBacground.png'
+import AboutFooterBacground from '../../img/AboutFooterBacground.png';
+
+import Instagram from '../../img/Instagram_Negative.png';
+import Vk from '../../img/VK_Negative.png';
+import TikTok from '../../img/TikTok_Negative.png';
+import Tg from '../../img/Tg.png';
 
 import { NavLink } from 'react-router-dom';
 
@@ -97,31 +102,33 @@ function About() {
                     <div className={style.AboutUsFooter}>
 
                         {/* Login Form */}
+
+                        {/* Сделать через finalform */}
                         <div className={style.LoginForm}>
                             <div className={style.LoginFormInput}>
-                                <input placeholder='Username' type="text" />
-                                <input placeholder='E-mail' type="email" />
-                                <input placeholder='Password' type="password" />
+                                <input className={style.Input} placeholder='Username' type="text" />
+                                <input className={style.Input} placeholder='E-mail' type="email" />
+                                <input className={style.Input} placeholder='Password' type="password" />
                             </div>
                             <button className={style.CastomBtn_2}>Login</button>
                         </div>
 
                         {/* Social Links */}
                         <div className={style.OurLinks}>
-                            <a href="" className={style.OureLinks_Links}>
-                                <img src="" alt="" />
+                            <a href="#" className={style.OureLinks_Links}>
+                                <img src={Instagram} alt="" />
                                 @Field.Fitness
                             </a>
-                            <a href="" className={style.OureLinks_Links}>
-                                <img src="" alt="" />
+                            <a href="#" className={style.OureLinks_Links}>
+                                <img src={Tg} alt="" />
                                 @fieldfitness
                             </a>
-                            <a href="" className={style.OureLinks_Links}>
-                                <img src="" alt="" />
+                            <a href="#" className={style.OureLinks_Links}>
+                                <img src={Vk} alt="" />
                                 https://vk.com/field_fitness
                             </a>
-                            <a href="" className={style.OureLinks_Links}>
-                                <img src="" alt="" />
+                            <a href="#" className={style.OureLinks_Links}>
+                                <img src={TikTok} alt="" />
                                 @gymfieldfitness
                             </a>
                         </div>
