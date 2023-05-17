@@ -1,0 +1,124 @@
+.Treining {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+
+}
+
+.FirstPart,
+.SecondPart {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+}
+
+.SecondPart{
+    padding-bottom: 150px;
+}
+
+.Content,
+.ContentRevers {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 58px;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 671px;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.Content {
+    flex-direction: row;
+}
+
+.ContentRevers {
+    flex-direction: row-reverse;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+}
+
+.text>p {
+    width: 636px;
+}
+
+.text>p>b {
+    font-size: 32px;
+}
+
+.TextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+
+    width: 608px;
+
+}
+
+.TextBox>h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.TextBox>p {
+    text-align: start;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+
+    color: #FFFFFF;
+}
+
+.TextSection {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    align-items: center;
+    justify-content: center;
+}
+
+.TextSection>p {
+    width: 1241px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+
+    color: #FFFFFF;
+}
+
+.Btn {
+    width: 381px;
+    height: 56px;
+
+    background: linear-gradient(270deg, #495E9D 0%, #688EFF 100%);
+    border-radius: 49px;
+
+    font-family: 'Monda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}

@@ -1,0 +1,36 @@
+.NavBar {
+    width: 100%;
+    max-height: 94px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.Navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 86px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+
+}
+
+.Navigation > a {
+    color: #fff;
+}
+
+.Navigation > a:hover{
+    color: var(--AlarmText);
+}
+
+.Navigation > a.active{
+    color: var(--AlarmText);
+}

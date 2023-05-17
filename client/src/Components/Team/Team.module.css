@@ -1,0 +1,66 @@
+.Team {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+
+}
+
+.CoachInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+
+}
+
+.Information,
+.Reviews {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Information{
+    flex-direction: row;
+}
+
+.Reviews {
+    flex-direction: row-reverse;
+}
+
+
+.TextBox {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Information>.TextBox {
+    gap: 10px;
+
+    width: 640px;
+
+
+}
+
+.Reviews>.TextBox {
+    gap: 50px;
+    width: 548.05px;
+}
+
+.TextBox>h3 {
+    font-size: 48px;
+}
+
+.PreInfo {
+    width: 322px;
+    text-align: center;
+}
