@@ -8,12 +8,13 @@ import Tg from "../../img/Tg.png";
 import AboutFooterBacground from "../../img/AboutFooterBacground.png";
 
 import { Field, Form } from "react-final-form";
+import { UserApi } from "../../api/api";
 
 const Login = (props) => {
 
     const onSubmit = (formData) =>{
         
-        props.login(formData.login,formData.password,formData.email)
+        UserApi.loginUser(formData.login,formData.password)
         
     }
 
@@ -51,20 +52,6 @@ const Login = (props) => {
                       {({ input, meta }) => (
                         <div>
                           <input className={style.Input} placeholder="username" {...input} />
-                          {meta.error && meta.touched && (
-                            <span>{meta.error}</span>
-                          )}
-                        </div>
-                      )}
-                    </Field>
-                    <Field
-                      validate={required}
-                      placeholder={"email"}
-                      name={"email"}
-                    >
-                      {({ input, meta }) => (
-                        <div>
-                          <input className={style.Input} placeholder="email" {...input} />
                           {meta.error && meta.touched && (
                             <span>{meta.error}</span>
                           )}
