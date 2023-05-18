@@ -37,4 +37,10 @@ a {
 
 p > i {
     font-style: normal;
+    color: var(--AlarmText);
+}
+
+i {
+    font-style: normal;
+    color: var(--AlarmText);
 }

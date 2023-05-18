@@ -1,0 +1,144 @@
+.Sport {
+    height: auto;
+}
+
+.MainSport {
+    min-height: 100vh;
+}
+
+.TwoBox {
+    min-width: 100vh;
+    height: auto;
+}
+
+.contentBox>.Content {
+    padding-top: 120px;
+}
+
+.Content1{
+    margin-top: -250px;
+}
+
+.Content, .Content1 {
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+
+    padding-top: 123px;
+
+    align-items: center;
+    height: 100vh;
+}
+
+.ContentRevers {
+    height: 115vh;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 250px;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.ContentRevers>.TextBox {
+    width: 540px;
+}
+
+.TextBox {
+    width: 692px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.TextBox>h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+
+    /* identical to box height, or 310% */
+
+    color: #FFFFFF;
+}
+
+.TextBox>p {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    /* or 200% */
+
+    color: #FFFFFF;
+}
+
+.Team {
+    height: auto;
+
+}
+
+.TeamBox {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-family: 'Monda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+
+}
+
+.TeamContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 100px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 50px;
+}
+
+.TeamItem{
+    display: flex;
+    flex-direction: column ;
+    gap: 20px;
+}
+
+.TeamItem>h4 {
+    font-family: 'Monda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+
+    /* identical to box height, or 310% */
+
+    color: #FFFFFF;
+
+
+}
+
+.TeamItem>p {
+    font-family: 'Monda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+
+    /* or 150% */
+    text-align: center;
+
+    color: #688EFF;
+
+    width: 322px;
+}
