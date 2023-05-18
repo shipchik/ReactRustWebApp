@@ -2,12 +2,12 @@
 
 diesel::table! {
     users (username) {
-        email -> Text,
-        username -> Text,
-        password -> Text,
-        telephone -> Text,
-        groups -> Text,
-        plans -> Text,
-        photo -> Text,
+        email -> Varchar,
+        username -> Varchar,
+        password -> Varchar,
+        telephone -> Varchar,
+        groups -> Varchar,
+        plans -> Varchar,
+        photo -> Varchar,
     }
 }

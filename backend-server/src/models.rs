@@ -1,8 +1,8 @@
 use super::schema::*;
-use diesel::{r2d2::ConnectionManager, SqliteConnection};
+use diesel::{r2d2::ConnectionManager, SqliteConnection,PgConnection};
 
 // type alias to use in multiple places
-pub type Pool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
+pub type Pool = r2d2::Pool<ConnectionManager<PgConnection>>;
 
 #[derive(Debug, Serialize, Deserialize, Queryable, Insertable)]
 #[table_name = "users"]

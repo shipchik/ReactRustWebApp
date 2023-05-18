@@ -101,7 +101,7 @@ pub fn me(
 
 fn get_me(data: SlimUser, pool: web::Data<Pool>) -> Result<GetMe, ServiceError> {
     use crate::schema::users::dsl::{username, users};
-    let conn: &SqliteConnection = &pool.get().unwrap();
+    let conn: &PgConnection = &pool.get().unwrap();
     let mut items = users
         .filter(username.eq(data.username))
         .load::<User>(conn)?;
@@ -134,7 +134,7 @@ fn get_me(data: SlimUser, pool: web::Data<Pool>) -> Result<GetMe, ServiceError> 
 /// Diesel query
 fn query(auth_data: LoginUser, pool: web::Data<Pool>) -> Result<SlimUser, ServiceError> {
     use crate::schema::users::dsl::{username, users};
-    let conn: &SqliteConnection = &pool.get().unwrap();
+    let conn: &PgConnection = &pool.get().unwrap();
     let mut items = users
         .filter(username.eq(&auth_data.username))
         .load::<User>(conn)?;
@@ -158,7 +158,7 @@ fn query_update(
     pool: web::Data<Pool>,
 ) -> Result<SlimUser, ServiceError> {
     use crate::schema::users::dsl::{password, username, users};
-    let conn: &SqliteConnection = &pool.get().unwrap();
+    let conn: &PgConnection = &pool.get().unwrap();
     let mut items = users
         .filter(username.eq(&auth_data.username))
         .load::<User>(conn)?;
@@ -209,7 +209,7 @@ pub fn user_profile(
 
 fn get_profile_data(data:SlimUser,pool: web::Data<Pool>) -> Result<ProfileData, ServiceError>{
     use crate::schema::users::dsl::{username, users};
-    let conn: &SqliteConnection = &pool.get().unwrap();
+    let conn: &PgConnection = &pool.get().unwrap();
     let mut items = users
         .filter(username.eq(data.username))
         .load::<User>(conn)?;
