@@ -16,7 +16,7 @@ function App() {
       <Navigation />
 
       <Routes>
-        <Route path='/Sport' element={<Sport />} />
+        <Route path='/' element={<Sport />} />
         <Route path='/Team' element={<Team />} />
         <Route path='/Training' element={<Training />} />
         <Route path="/About" element={<About />} />

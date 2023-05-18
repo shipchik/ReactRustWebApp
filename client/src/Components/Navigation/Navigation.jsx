@@ -9,7 +9,7 @@ function Navigation() {
         <div className="container">
             <div className={style.NavBar}>
 
-                <NavLink to='/Sport'><img src={Logo} alt="" /></NavLink>
+                <NavLink to='/'><img src={Logo} alt="" /></NavLink>
 
                 <div className={style.Navigation}>
                     <NavLink to='/Team' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Our team</NavLink>

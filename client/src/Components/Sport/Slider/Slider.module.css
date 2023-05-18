@@ -1,1 +1,44 @@
+.SliderBox {
+    height: 90vh;
+    width: 100vw;
+}
 
+.EachFade {
+    height: 90vh;
+    width: 100vw;
+}
+
+
+
+
+.Headline {
+    width: 100vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: start;
+
+    padding-left: 120px;
+
+}
+
+.Headline>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+
+    color: #fff;
+}
+
+.Headline>p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+
+
+    color: #FFFFFF;
+}
