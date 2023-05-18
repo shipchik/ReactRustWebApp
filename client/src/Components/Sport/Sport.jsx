@@ -60,7 +60,7 @@ function Sport() {
                 }}
                 >
 
-                    <div className={style.Content}>
+                    <div className={style.Content1}>
                         <img src={Bg22} alt="" />
                         <div className={style.TextBox}>
                             <h3>Why FieldFitness?</h3>

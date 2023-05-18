@@ -7,6 +7,7 @@ import Sport from './Components/Sport/Sport';
 import { Route, Routes } from 'react-router-dom';
 import Training from './Components/Training/Training.jsx';
 import Team from './Components/Team/Team.jsx';
+import Profile from './Components/Profile/Profile';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Training' element={<Training />} />
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes >
 
     </div>
