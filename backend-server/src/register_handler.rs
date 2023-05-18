@@ -31,7 +31,7 @@ pub fn create_user(
 /// Diesel query
 fn query(auth_data: RegisterUser, pool: web::Data<Pool>) -> Result<SlimUser, ServiceError> {
     use crate::schema::users::dsl::{username, users};
-    let conn: &PgConnection = &pool.get().unwrap();
+    let conn: &SqliteConnection = &pool.get().unwrap();
     let items = users
         .filter(username.eq(&auth_data.username))
         .load::<User>(conn)?;
