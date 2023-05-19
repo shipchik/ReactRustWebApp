@@ -37,7 +37,7 @@ function Training() {
                         </section>
 
                         <section className={style.ContentRevers}>
-                            <img src={img2} alt="" />
+                            
                             <div className={style.TextBox}>
                                 <h5>Resistance training:</h5>
                                 <p>Using weights, resistance bands, or machines to challenge specific muscle groups, with progressive overload to stimulate muscle growth and toning. Examples of resistance exercises include bench press, shoulder press, bicep curls, tricep extensions, squats, lunges, deadlifts, leg presses, and calf raises.</p>
@@ -71,7 +71,7 @@ function Training() {
                     </section>
 
                     <section className={style.Content}>
-                        <img src={img5} alt="" />
+                       
                         <div className={style.TextBox}>
                             <h5>Core training:</h5>
                             <p>Targeting the muscles of the abdominals, lower back, hips, and pelvis to stabilize and support the spine, improve posture, and enhance athletic performance. Examples of core exercises include planks, sit-ups, Russian twists, leg lifts, and back extensions.</p>
