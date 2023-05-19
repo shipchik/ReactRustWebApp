@@ -9,15 +9,15 @@ function Navigation() {
         <div className="container">
             <div className={style.NavBar}>
 
-                <NavLink to='/'><img src={Logo} alt="" /></NavLink>
+                <NavLink to='/'>Здесь могла быть ваша реклама</NavLink>
 
                 <div className={style.Navigation}>
 
-                    <NavLink to='/Team' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Our team</NavLink>
-                    <NavLink to='/Training' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Training</NavLink>
-                    <NavLink to='/About' className={({ isActive }) => (isActive ? style.active : 'inactive')}>About</NavLink>
-                    <NavLink to='/Login' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Login</NavLink>
-                    <NavLink to='/Profile' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Profile</NavLink>
+                    <NavLink to='/Team' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Кто</NavLink>
+                    <NavLink to='/Training' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Знает</NavLink>
+                    <NavLink to='/About' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Куда</NavLink>
+                    <NavLink to='/Login' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Ведёт</NavLink>
+                    {/* <NavLink to='/Profile' className={({ isActive }) => (isActive ? style.active : 'inactive')}>Profile</NavLink> */}
                 </div>
             </div>
         </div >

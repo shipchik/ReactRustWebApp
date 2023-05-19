@@ -17,7 +17,7 @@ import Img03 from '../../img/Team/O1.png'
 function Sport() {
     return (
         <div className={style.Sport}>
-            <Slider />
+            <Login />
             <div>
                 <div className={style.MainSport} style={{
                     backgroundImage: `url(${Bg11})`,
@@ -69,7 +69,7 @@ function Sport() {
                         </div>
                     </div>
                 </div>
-
+{/* 
                 <div className={style.Team} style={{
                     background: `#394159`,
                 }}>
@@ -97,10 +97,10 @@ function Sport() {
                         </div>
                     </div>
 
-                </div>
+                </div> */}
 
             </div>
-            <Login />
+            <Slider />
 
         </div>
     );
