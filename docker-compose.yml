@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+    
     db:
         environment:
             POSTGRES_USER: "backend_db"
